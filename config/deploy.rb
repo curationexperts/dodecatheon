@@ -2,7 +2,7 @@
 lock "~> 3.10.1"
 
 set :application, "dodecatheon"
-set :repo_url, "git@github.com:curationexperts/dodecatheon.git"
+set :repo_url, "https://github.com/curationexperts/dodecatheon.git"
 
 set :deploy_to, '/opt/cypripedium'
 
