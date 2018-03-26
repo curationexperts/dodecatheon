@@ -1,0 +1,21 @@
+sudo: required
+dist: trusty
+language: ruby
+# cache: bundler
+sudo: false
+services:
+  - redis-server
+notifications:
+  email: false
+  slack:
+    on_success: never
+    on_failure: always
+jdk:
+  - oraclejdk8
+rvm:
+  - 2.4.2
+before_script:
+  - bundle exec rake db:create
+script:
+  - bundle exec rubocop
+  - bundle exec rspec spec
